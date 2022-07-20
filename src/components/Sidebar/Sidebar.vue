@@ -1,10 +1,10 @@
 <template>
-    <div class="sidebar">
+    <aside class="sidebar col-1">
         <div class="mt-2"><img src="../../assets/logo.png" /></div>
         <div v-for="link, index in links" :key="index">
             <SidebarLink :linkName="link" />
         </div>
-    </div>
+    </aside>
 </template>
 <script>
 import SidebarLink from './SidebarLink.vue'

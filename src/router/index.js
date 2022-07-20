@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 const routes = [
     {
         path: "/employee",
-        name: "Employee",
+        name: "Employees",
         component: Employee
     },
     {

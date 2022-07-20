@@ -1,31 +1,30 @@
 <template>
     <div class="default-layout">
         <div class="row">
-            <div class="col-1"> <Sidebar/> </div>
-            <div class="col-11">
-                <div class="row view-title">
-                    <div class="col-lg-6">{{viewTitle}}</div>
-                </div> 
-                <router-view>
-                </router-view> 
-            </div>
+            <Sidebar/>
+            <main class="col-11 px-2">
+                <HeadBar :title="viewTitle"/> 
+                <router-view/>
+            </main>
         </div>
     </div>        
 </template>
 <script>
 import Sidebar from "../components/Sidebar/Sidebar.vue";
+import HeadBar from "../components/common/HeadBar.vue";
 export default {
     name: "default-layout",
     components: {
-        Sidebar
+        Sidebar,
+        HeadBar
     },
     computed: {
         viewTitle() {
-            return "Employees"
+            return this.$route.name;
         }
     },
-    mounted() {
-        console.log(this.$router.params);
-    }
+    // mounted() {
+    //     console.log(this.$route.name);
+    // }
 }
 </script>
