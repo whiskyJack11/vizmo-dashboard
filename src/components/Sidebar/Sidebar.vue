@@ -13,7 +13,7 @@ export default {
   components: { SidebarLink },
     data() {
         return {
-            links: ["home", "employee", "contacts", "about"]
+            links: ["home", "employee", "contact", "about"]
         }
     }
 }

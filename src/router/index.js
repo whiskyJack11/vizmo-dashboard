@@ -1,4 +1,7 @@
 import Employee from "../components/employee/Employee";
+import Home from "../components/home/Home";
+import About from "../components/about/About";
+import Contact from "../components/contact/Contact"
 import VueRouter from "vue-router";
 const routes = [
     {
@@ -9,17 +12,17 @@ const routes = [
     {
         path: "/home",
         name: "Home",
-        component: Employee
+        component: Home
     },
     {
         path: "/about",
         name: "About",
-        component: Employee
+        component: About
     },
     {
         path: "/contact",
         name: "Contact",
-        component: Employee
+        component: Contact
     }
 ];
 const router = new VueRouter({
